@@ -6,7 +6,6 @@ from flask_session import Session
 import time
 from flask_login import LoginManager, login_user, logout_user
 from user import get_user
-
 from tables import database as d
 from passlib.hash import pbkdf2_sha256
 from forms import LoginForm, SignUpForm

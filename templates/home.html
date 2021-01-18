@@ -4,13 +4,38 @@
     <meta charset="utf-8"/>
     <title>StudentPad</title>
     <style>
+
+        h1
+        {
+            color:whitesmoke;
+        }
+
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        .bg {
+            /* The image used */
+            background-image: url("/static/bgg.jpg");
+
+            /* Full height */
+            height: 100%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
         .vertical-menu {
             width: 200px;
         }
 
         .vertical-menu a {
-            background-color: #eee;
-            color: black;
+            background-color: #ebc8b2;
+            color: saddlebrown;
+            font-weight: bold;
             display: block;
             padding: 11px;
             text-decoration: none;
@@ -22,16 +47,11 @@
         .vertical-menu{
             font-size: 15px;
         }
-        .referans{
-            position: fixed;
-            bottom: 0px;
-            right: 0px;
-            font-size:12px;
-        }
     </style>
 </head>
 <body>
-<h1>TODAY: {{ day }}<h1>
+<div class="bg">
+    <h1><i>StudentPad</i></h1>
     <div class="vertical-menu">
         <ul>
             <li><a href="/interviews">List interviews</a></li>
@@ -50,5 +70,6 @@
 
         </ul>
     </div>
+</div>
 </body>
 </html>
