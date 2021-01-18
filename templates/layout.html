@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8"/>
+    <title>StudentPad</title>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css"/>
+    <link rel="stylesheet" href="/static/product.css"/>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: powderblue;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: cadetblue;
+        }
+
+        .navbar a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+    </style>
+
+</head>
+<body>
+<header>
+    <nav class="navbar" aria-label="main navigation">
+        <div class="navbar-brand">
+              <span class="navbar-item">
+                <a class="button is-link" href="{{ url_for('home_page') }}">Home</a>
+              </span>
+            <span class="navbar-item">
+                <a class="button is-link" href="{{ url_for('signup_page') }}">Sign up</a>
+              </span>
+              </span>
+        </div>
+    </nav>
+</header>
+
+<main>
+    {% for message in get_flashed_messages() %}
+    <div class="notification is-info">{{ message }}</div>
+    {% endfor %}
+
+    <section class="section">
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
+    </section>
+</main>
+</body>
+</html>

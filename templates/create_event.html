@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block title %} {% endblock %}
+{% block content %}
+<h1 class="title">Create an event</h1>
+
+<form action="" method="post" name="add_event">
+    <div class="field">
+        <label for="comment" class="label">Topic</label>
+        <div class="control">
+            <input type="text" id= "comment" name="comment" class="input" placeholder= "comment" required="required"/>
+        </div>
+    </div>
+    <div class="field">
+        <label for="date_from" class="label">Date from</label>
+        <div class="control">
+            <input type="date" id= "date_from" name="date_from" class="input" placeholder= "date_from" required="required"/>
+        </div>
+    </div>
+    <div class="field">
+        <label for="date_to" class="label">Date to</label>
+        <div class="control">
+            <input type="date" id= "date_to" name="date_to" class="input" placeholder= "date_to" required="required"/>
+        </div>
+    </div>
+    <div class="field">
+        <label for="status" class="label">Status</label>
+        <div class="control">
+            <select name="status" id="status">
+                <option value="Approved">Approved</option>
+                <option value="Declined">Declined</option>
+                <option value="Pending">Pending</option>
+            </select>
+        </div>
+    </div>
+    <div class="field is-grouped">
+        <div class="control">
+            <button class="button is-primary is-small">Save</button>
+        </div>
+    </div>
+</form>
+{% endblock %}

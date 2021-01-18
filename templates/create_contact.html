@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block title %} {% endblock %}
+{% block content %}
+<h1 class="title">Create a contact</h1>
+
+<form action="" method="post" name="add_contact">
+    <div class="field">
+        <label for="contact_name" class="label">Contact Name</label>
+        <div class="control">
+            <input type="text" id= "contact_name" name="contact_name" class="input" placeholder= "contact_name" required="required"/>
+        </div>
+    </div>
+    <div class="field">
+        <label for="contact_surname" class="label">Contact Surname</label>
+        <div class="control">
+            <input type="text" id= "contact_surname" name="contact_surname" class="input" placeholder= "contact_surname" required="required"/>
+        </div>
+    </div>
+    <div class="field">
+        <label for="contact_email" class="label">Contact Email</label>
+        <div class="control">
+            <input type="email" id= "contact_email" name="contact_email" class="input" placeholder= "contact_email" required="required"/>
+        </div>
+    </div>
+    <div class="field">
+        <label for="contact_number" class="label">Contact Number</label>
+        <div class="control">
+            <input type="text" id= "contact_number" name="contact_number" class="input" placeholder= "contact_number" required="required"/>
+        </div>
+    </div>
+    <div class="field is-grouped">
+        <div class="control">
+            <button class="button is-primary is-small">Save</button>
+        </div>
+    </div>
+</form>
+{% endblock %}

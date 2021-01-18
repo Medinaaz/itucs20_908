@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block title %} {% endblock %}
+{% block content %}
+<h1 class="title">Create a role</h1>
+
+<form action="" method="post" name="add_role">
+    <div class="field">
+        <label for="surname" class="label">Surname</label>
+        <div class="control">
+            <input type="text" id= "surname" name="surname" class="input" placeholder= "surname" required="required"/>
+        </div>
+    </div>
+
+    <div class="field">
+        <label for="email" class="label">Email</label>
+        <div class="control">
+            <input type="text" id= "email" name="email" class="input" placeholder= "email" required="required"/>
+        </div>
+    </div>
+
+    <div class="field">
+        <label for="number" class="label">number</label>
+        <div class="control">
+            <input type="text" id= "number" name="number" class="input" placeholder= "number" required="required"/>
+        </div>
+    </div>
+    <div class="field">
+        <label for="event_quota" class="label">Event Quota</label>
+        <div class="control">
+            <input type="number" id= "event_quota" name="event_quota" class="input" placeholder= "event quota" required="required"/>
+        </div>
+    </div>
+    <div class="field is-grouped">
+        <div class="control">
+            <button class="button is-primary is-small">Save</button>
+        </div>
+    </div>
+</form>
+{% endblock %}

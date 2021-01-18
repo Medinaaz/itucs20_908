@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block title %}Interview List{% endblock %}
+{% block content %}
+<h1 class="title">Interviews</h1>
+
+{% if interviews %}
+<form action="" method="post" name="interview_list">
+    <table class="table is-striped is-fullwidth">
+        {% for interview in interviews %}
+        <tr>
+            <td>
+                {% if current_user.name == interview[0] or current_user.bool_admin %}
+                <label class="checkbox" >
+                    <input type="checkbox" name="deletes" value="{{ interview[3] }}"/>
+                </label>
+                {% endif %}
+                {{interview[3]}}
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                {{interview[1]}}
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                {{interview[2]}}
+            </td>
+        </tr>
+        {% endfor %}
+        <div class="field is-grouped">
+            <div class="control">
+                <button class="button is-danger is-small">Delete</button>
+            </div>
+        </div>
+    </table>
+</form>
+{% endif %}
+{% endblock %}
