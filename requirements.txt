@@ -1,0 +1,8 @@
+psycopg2==2.8.6
+Flask==1.0.2
+passlib==1.7.1
+Flask_WTF==0.14.2
+Flask_Session==0.3.2
+WTForms==2.2.1
+Flask_Login==0.4.1
+gunicorn
